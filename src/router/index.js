@@ -5,6 +5,11 @@ import Hello from '@/components/Hello'
 import Dirs from '@/components/Dirs'
 import DataBind from '@/components/DataBind'
 import EventDeal from '@/components/EventDeal'
+import StyleDemo from '@/components/StyleDemo'
+import ComputeDemo from '@/components/ComputeDemo'
+import AjaxDemo from '@/components/AjaxDemo'
+import AjaxDemo1 from '@/components/AjaxDemo1'
+import UseMixin from '@/components/UseMixin'
 Vue.use(Router)
 
 export default new Router({
@@ -34,6 +39,31 @@ export default new Router({
       path: '/eventdeal',
       name: 'EventDeal',
       component: EventDeal
+    },
+    {
+      path: '/styledemo',
+      name: 'StyleDemo',
+      component: StyleDemo
+    },
+    {
+      path: '/computed',
+      name: 'ComputeDemo',
+      component: ComputeDemo
+    },
+    {
+      path: '/ajaxdemo',
+      name: 'AjaxDemo',
+      component: AjaxDemo
+    },
+    {
+      path: '/ajaxdemo1',
+      name: 'AjaxDemo1',
+      component: AjaxDemo1
+    },
+    {
+      path: '/mixin',
+      name: 'UseMixin',
+      component: UseMixin
     }
   ]
 })

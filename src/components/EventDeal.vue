@@ -10,6 +10,11 @@
     <div class="a" @click.self="sayhello">
         <div class="b"></div>
     </div>
+    <hr>
+    <!-- 弹起回车键 -->
+    <input @keyup.enter="submit" type="text">
+    <!-- 同时按下Ctrl+shift键 -->
+    <input v-on:keydown.ctrl.shift="submit" type="text">
 </div>
 </template>
 
@@ -36,6 +41,9 @@ export default {
     },
     set: function (message) {
       this.message = message
+    },
+    submit: function (e) {
+      alert('按下enter键')
     }
   },
   // 生命周期 --创建完成(访问当前this实例)
