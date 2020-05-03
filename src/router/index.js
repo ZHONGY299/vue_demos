@@ -7,9 +7,11 @@ import DataBind from '@/components/DataBind'
 import EventDeal from '@/components/EventDeal'
 import StyleDemo from '@/components/StyleDemo'
 import ComputeDemo from '@/components/ComputeDemo'
+import WatchDemo from '@/components/WatchDemo'
 import AjaxDemo from '@/components/AjaxDemo'
 import AjaxDemo1 from '@/components/AjaxDemo1'
 import UseMixin from '@/components/UseMixin'
+import Child from '@/components/Child'
 Vue.use(Router)
 
 export default new Router({
@@ -51,6 +53,11 @@ export default new Router({
       component: ComputeDemo
     },
     {
+      path: '/watch',
+      name: 'WatchDemo',
+      component: WatchDemo
+    },
+    {
       path: '/ajaxdemo',
       name: 'AjaxDemo',
       component: AjaxDemo
@@ -64,6 +71,11 @@ export default new Router({
       path: '/mixin',
       name: 'UseMixin',
       component: UseMixin
+    },
+    {
+      path: '/child',
+      name: 'Child',
+      component: Child
     }
   ]
 })

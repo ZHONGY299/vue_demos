@@ -1,5 +1,7 @@
 <template>
   <div>
+    <!-- my-logo中使用组件 -->
+    <my-logo></my-logo>
     <h1 ref="hello">this is a frist page!</h1>
     <h2>{{message}}</h2>
     <h3>{{hobbies[2]}}</h3>
@@ -11,7 +13,13 @@
   </div>
 </template>
 <script>
+// 引入Logo组件
+import MyLogo from '@/components/Logo'
 export default {
+  // 在components声明组件
+  components: {
+    MyLogo: MyLogo
+  },
   data () {
     return {
       message: 'hello,vue.js!',
