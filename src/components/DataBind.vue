@@ -29,7 +29,9 @@
     username:{{person.username}}<br/>
     gender:{{person.gender}}<br/>
     hobbies:{{person.hobbies}}<br/>
-    identity:{{person.identity}}<br>
+    identity:{{person.identity}}<br><hr>
+    <button @click="getQuery()">接收参数</button><br>
+    <button @click="getParmas()">接收参数</button><br>
 </div>
 </template>
 
@@ -53,6 +55,16 @@ export default {
     },
     change_user: function () {
       this.person.username = '李四'
+    },
+    getQuery: function () {
+      let aa = this.$route.query.id
+      console.log(aa)
+      console.dir(this)
+    },
+    getParmas: function () {
+      let aa = this.$route.params.id
+      console.log(aa)
+      console.dir(this)
     }
   },
   // 生命周期 --创建完成(访问当前this实例)

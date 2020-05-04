@@ -10,6 +10,7 @@ import ComputeDemo from '@/components/ComputeDemo'
 import WatchDemo from '@/components/WatchDemo'
 import AjaxDemo from '@/components/AjaxDemo'
 import AjaxDemo1 from '@/components/AjaxDemo1'
+import AjaxDemo2 from '@/components/AjaxDemo2'
 import UseMixin from '@/components/UseMixin'
 import Child from '@/components/Child'
 Vue.use(Router)
@@ -33,7 +34,7 @@ export default new Router({
       component: Dirs
     },
     {
-      path: '/databind',
+      path: '/databind/:id',
       name: 'DataBind',
       component: DataBind
     },
@@ -66,6 +67,11 @@ export default new Router({
       path: '/ajaxdemo1',
       name: 'AjaxDemo1',
       component: AjaxDemo1
+    },
+    {
+      path: '/ajaxdemo2',
+      name: 'AjaxDemo2',
+      component: AjaxDemo2
     },
     {
       path: '/mixin',

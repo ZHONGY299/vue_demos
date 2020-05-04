@@ -1,12 +1,12 @@
 <template>
 <div>
-    <select name="" id="province" @change="getProvince">
-        <option v-for="p in provinces" v-bind:key="p" :value="p">
-            {{p}}
+    <select name="" id="province" v-model="p">
+        <option v-for="p1 in provinces" :key="p1" :value="p1">
+            {{p1}}
         </option>
     </select>
-    <select name="" id="city">
-        <option v-for="city in citys" v-bind:key="city" :value="city">
+     <select name="" id="city">
+        <option v-for="city in citys" :key="city" :value="city">
             {{city}}
         </option>
     </select>
@@ -19,22 +19,28 @@ export default {
     return {
       ajaxData: {},
       provinces: [],
-      citys: []
+      citys: [],
+      p: ''
     }
   },
   methods: {
-    getProvince: function () {
-      console.log(document.getElementById('province').value)
-      let provinceName = document.getElementById('province').value
-      for (let index = 0; index < this.ajaxData.length; index++) {
-        for (let key in this.ajaxData[index]) {
-          if (key === provinceName) {
-            this.citys = this.ajaxData[index][key]
-            console.info(this.citys)
+
+  },
+  // 计算属性
+  computed: {
+
+  },
+  // 观察
+  watch: {
+    p: function () {
+      this.ajaxData.forEach(function (courrentValue, index, arr) {
+        for (let key in courrentValue) {
+          if (key === this.p) {
+            this.citys = courrentValue[key]
             break
           }
         }
-      }
+      }, this)
     }
   },
   // 生命周期 --创建完成(访问当前this实例)

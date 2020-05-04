@@ -6,7 +6,9 @@ import router from './router'
 import axios from 'axios'
 
 Vue.config.productionTip = false
-Vue.config.$axios = axios
+// Vue.config.$axios = axios
+// 所有VUE实例能够使用axios(this.$axios)
+Vue.prototype.$axios = axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
