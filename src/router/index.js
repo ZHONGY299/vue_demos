@@ -13,6 +13,9 @@ import AjaxDemo1 from '@/components/AjaxDemo1'
 import AjaxDemo2 from '@/components/AjaxDemo2'
 import UseMixin from '@/components/UseMixin'
 import Child from '@/components/Child'
+import ParentComponent from '@/components/ParentComponent'
+import A from '@/components/A'
+import VuexDemo from '@/components/VuexDemo'
 Vue.use(Router)
 
 export default new Router({
@@ -82,6 +85,21 @@ export default new Router({
       path: '/child',
       name: 'Child',
       component: Child
+    },
+    {
+      path: '/parent',
+      name: 'ParentComponent',
+      component: ParentComponent
+    },
+    {
+      path: '/a',
+      name: 'A',
+      component: A
+    },
+    {
+      path: '/vuexdemo',
+      name: 'VuexDemo',
+      component: VuexDemo
     }
   ]
 })
